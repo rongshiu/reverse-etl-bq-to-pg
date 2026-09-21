@@ -1,0 +1,15 @@
+SELECT CURRENT_TIMESTAMP() AS etl_run_timestamp,
+    total_members as total_customers,
+    gen_z_count,
+    gen_z_percentage,
+    millennial_count,
+    millennial_percentage,
+    gen_x_count,
+    gen_x_percentage,
+    boomer_count,
+    boomer_percentage,
+    silent_generation_count,
+    silent_generation_percentage,
+    not_specified_count,
+    not_specified_percentage
+FROM `mart_aeon_rt.fct_rt__opco_main_age_distribution_report`;

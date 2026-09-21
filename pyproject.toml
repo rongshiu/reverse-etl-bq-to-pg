@@ -1,0 +1,16 @@
+[project]
+name = "bq-export"
+version = "0.1.0"
+description = "Export BigQuery query results to GCS as CSV and optionally load them into CloudSQL (Postgres) with DuckDB."
+requires-python = ">=3.11"
+dependencies = [
+    "google-cloud-bigquery>=3.10.0",
+    "google-cloud-storage>=2.14.0",
+    "google-auth>=2.28.0",
+    "sqlalchemy>=2.0.0",
+    "psycopg2-binary>=2.9.9",
+    "duckdb>=1.3.0",
+]
+
+[tool.uv]
+package = false

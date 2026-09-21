@@ -1,0 +1,43 @@
+services:
+  # postgres:
+  #   image: postgres:16
+  #   container_name: bq-export-postgres
+  #   environment:
+  #     POSTGRES_DB: postgres
+  #     POSTGRES_USER: app
+  #     POSTGRES_PASSWORD: app
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U app -d postgres"]
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 20
+
+  bq-export:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bq-export-app
+    working_dir: /app
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /home/appuser/.config/gcloud/application_default_credentials.json
+      GOOGLE_CLOUD_PROJECT: prj-dev-cdp-svc-91
+      GCS_BUCKET_PREFIX: gs://bkt-prj-dev-cdp-svc-ase1-cdp-fortii/dev
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/app
+      - ${HOME}/.config/gcloud:/home/appuser/.config/gcloud:ro
+    # depends_on:
+    #   postgres:
+    #     condition: service_healthy
+    command:
+      - --config
+      - /app/config/visualization_customer.json
+      - --postgres_conn
+      - postgresql://${DB_USER-app}:${DB_PASSWORD-app}@${DB_HOST-host.docker.internal}:${DB_PORT-5432}/${DB_NAME:-postgres}
+      # - postgresql://sa-cdphub-migration-svc-uat%40prj-uat-cdphub-svc-d2.iam@host.docker.internal:5433/postgres?sslmode=disable
+volumes:
+  postgres_data:

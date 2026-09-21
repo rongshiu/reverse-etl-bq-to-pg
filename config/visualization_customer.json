@@ -1,0 +1,62 @@
+[
+    {
+        "sql_file": "sql/cdphub/main_customer_overview_report_fact.sql",
+        "gcs_path": "bq-export/main_customer_overview_report_fact.csv",
+        "rds_target": "public.main_customer_overview_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_activity_trend_report_fact.sql",
+        "gcs_path": "bq-export/main_activity_trend_report_fact.csv",
+        "rds_target": "public.main_activity_trend_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_age_distribution_report_fact.sql",
+        "gcs_path": "bq-export/main_age_distribution_report_fact.csv",
+        "rds_target": "public.main_age_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_customer_opco_report_fact.sql",
+        "gcs_path": "bq-export/main_customer_opco_report_fact.csv",
+        "rds_target": "public.main_customer_opco_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_gender_distribution_report_fact.sql",
+        "gcs_path": "bq-export/main_gender_distribution_report_fact.csv",
+        "rds_target": "public.main_gender_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_member_penetration_pct_total_transaction_fact.sql",
+        "gcs_path": "bq-export/main_member_penetration_pct_total_transaction_fact.csv",
+        "rds_target": "public.main_member_penetration_pct_total_transaction_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_membership_tier_distribution_report_fact.sql",
+        "gcs_path": "bq-export/main_membership_tier_distribution_report_fact.csv",
+        "rds_target": "public.main_membership_tier_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_lifecycle_overview_report_fact.sql",
+        "gcs_path": "bq-export/main_lifecycle_overview_report_fact.csv",
+        "rds_target": "public.main_lifecycle_overview_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_lifecycle_stage_report_fact.sql",
+        "gcs_path": "bq-export/main_lifecycle_stage_report_fact.csv",
+        "rds_target": "public.main_lifecycle_stage_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/main_members_tenure_distribution_report_fact.sql",
+        "gcs_path": "bq-export/main_members_tenure_distribution_report_fact.csv",
+        "rds_target": "public.main_members_tenure_distribution_report_fact",
+        "load_mode": "truncate_append"
+    }
+]

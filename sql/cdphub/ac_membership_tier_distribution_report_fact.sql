@@ -1,0 +1,11 @@
+SELECT TIMESTAMP(snapshot_date, 'Asia/Kuala_Lumpur') AS etl_run_timestamp,
+    tier,
+    member_count,
+    member_change,
+    member_percentage,
+    total_members,
+    _transform_at as created_at
+FROM `mart_aeon_ac.fct_ac__opco_membership_tier_distribution_report_fact`
+WHERE snapshot_date BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 2 YEAR)
+    AND CURRENT_DATE()
+ORDER BY snapshot_date DESC;

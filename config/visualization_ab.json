@@ -1,0 +1,20 @@
+[
+    {
+        "sql_file": "sql/cdphub/ab_main_gender_distribution_report_fact.sql",
+        "gcs_path": "bq-export/ab_main_gender_distribution_report_fact.csv",
+        "rds_target": "public.ab_main_gender_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/ab_main_age_distribution_report_fact.sql",
+        "gcs_path": "bq-export/ab_main_age_distribution_report_fact.csv",
+        "rds_target": "public.ab_main_age_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/ab_membership_tier_distribution_report_fact.sql",
+        "gcs_path": "bq-export/ab_membership_tier_distribution_report_fact.csv",
+        "rds_target": "public.ab_membership_tier_distribution_report_fact",
+        "load_mode": "truncate_append"
+    }
+]

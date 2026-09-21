@@ -1,0 +1,15 @@
+SELECT CURRENT_TIMESTAMP() AS etl_run_timestamp,
+    month_year,
+    period_type,
+    member_status as status,
+    member_count as count,
+    total_members,
+    null as total_non_members,
+    activity_percentage,
+    null as non_member_activity_percentage,
+    change_vs_previous_period,
+    null as non_member_change_vs_previous_period,
+    member_count_last_year,
+    yoy_delta,
+    yoy_delta_percentage
+FROM `mart_aeon_360.fct_360_main__member_activity_trend`
