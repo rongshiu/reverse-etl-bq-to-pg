@@ -1,0 +1,50 @@
+[
+    {
+        "sql_file": "sql/cdphub/bg_main_gender_distribution_report_fact.sql",
+        "gcs_path": "bq-export/bg_main_gender_distribution_report_fact.csv",
+        "rds_target": "public.bg_main_gender_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_main_age_distribution_report_fact.sql",
+        "gcs_path": "bq-export/bg_main_age_distribution_report_fact.csv",
+        "rds_target": "public.bg_main_age_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_main_member_activity_trend_report_fact.sql",
+        "gcs_path": "bq-export/bg_main_member_activity_trend_report_fact.csv",
+        "rds_target": "public.bg_main_member_activity_trend_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_main_members_tenure_distribution_report_fact.sql",
+        "gcs_path": "bq-export/bg_main_members_tenure_distribution_report_fact.csv",
+        "rds_target": "public.bg_main_members_tenure_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_membership_tier_distribution_report_fact.sql",
+        "gcs_path": "bq-export/bg_membership_tier_distribution_report_fact.csv",
+        "rds_target": "public.bg_membership_tier_distribution_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_tenuredetail_members_tenure_overview_report_fact.sql",
+        "gcs_path": "bq-export/bg_tenuredetail_members_tenure_overview_report_fact.csv",
+        "rds_target": "public.bg_tenuredetail_members_tenure_overview_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_tenuredetail_tenure_distribution_yearly_report_fact.sql",
+        "gcs_path": "bq-export/bg_tenuredetail_tenure_distribution_yearly_report_fact.csv",
+        "rds_target": "public.bg_tenuredetail_tenure_distribution_yearly_report_fact",
+        "load_mode": "truncate_append"
+    },
+    {
+        "sql_file": "sql/cdphub/bg_tenuredetail_tenure_frequency_report_fact.sql",
+        "gcs_path": "bq-export/bg_tenuredetail_tenure_frequency_report_fact.csv",
+        "rds_target": "public.bg_tenuredetail_tenure_frequency_report_fact",
+        "load_mode": "truncate_append"
+    }
+]
